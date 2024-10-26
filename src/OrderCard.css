@@ -1,0 +1,44 @@
+.orderCard {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.orderCardSection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.orderCardLabel {
+    font-weight: bold;
+}
+
+.orderCardValue {
+    margin-left: 10px;
+}
+
+.rejectButton, .acceptButton {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rejectButton {
+    background-color: #f44336; /* Red */
+    color: white;
+}
+
+.acceptButton {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.rejectButton:hover, .acceptButton:hover {
+    opacity: 0.8; /* Slightly darker on hover */
+}
