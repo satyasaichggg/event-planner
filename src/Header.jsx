@@ -1,17 +1,18 @@
-// Header.js
 import React from 'react';
-import { Link } from 'react-router-dom'; // Use Link without a Router
+import { Link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark" style={{ backgroundColor: '#e82c74', minHeight: "100px" }}>
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/">Event Planner</Link>
+                {/* Brand */}
+                <Link className="navbar-brand fs-4" to="/"><h1>Event Planner</h1></Link>
+                
+                {/* Navbar Toggler */}
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -23,24 +24,31 @@ function Header() {
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
+
+                {/* Navbar Links (Right-aligned) */}
+                <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/">Home</Link>
+                        <li className="nav-item ms-3">
+                            <Link className="nav-link fs-4" to="/">Home</Link> {/* Increased size to fs-4 */}
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/venues">Venues</Link>
+                        <li className="nav-item ms-3">
+                            <Link className="nav-link fs-4" to="/venues">Venues</Link> {/* Increased size to fs-4 */}
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/vendors">Vendors</Link>
+                        <li className="nav-item ms-3">
+                            <Link className="nav-link fs-4" to="/vendors">Vendors</Link> {/* Increased size to fs-4 */}
+                        </li>
+                        <li className="nav-item ms-3"> {/* Added extra gap after vendors */}
+                            &nbsp;
                         </li>
                     </ul>
                 </div>
+
+                {/* User Profile Icon */}
                 <div className="d-flex">
                     <ul className="navbar-nav">
                         <li className="nav-item text-center">
-                            <Link className="nav-link" to="/profile">
-                                <FontAwesomeIcon icon={faUser} />
+                            <Link className="nav-link fs-5" to="/profile">
+                                <FontAwesomeIcon icon={faUser} size="lg" />
                             </Link>
                         </li>
                     </ul>

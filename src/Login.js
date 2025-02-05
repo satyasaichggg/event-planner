@@ -30,9 +30,10 @@ const Login = () => {
     };
 
     return (
+    
         <div className="register-container"> {/* Reusing the same container styles */}
             <div className="left-side">
-                <h2>Login</h2> {/* Changed to Login */}
+                <h2><b>Login</b></h2> {/* Changed to Login */}
                 <i>Welcome back to Event Planner</i>
                 <br />
                 <br />
@@ -73,6 +74,7 @@ const Login = () => {
                 <img src="https://i.pinimg.com/564x/99/9b/19/999b1906c651c56fc5dffd1bef58f8b2.jpg" alt="Landscape" className="landscape-image" />
             </div>
         </div>
+       
     );
 };
 
